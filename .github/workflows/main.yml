@@ -24,7 +24,7 @@ jobs:
         run: echo "MLFLOW_TRACKING_URI=file://${{ github.workspace }}/mlruns" >> $GITHUB_ENV
 
       - name: Run mlflow project
-        run: mlflow run ./Workflow-CI --env-manager local
+        run: mlflow run MLProject --env-manager local
         env:
           # Membuka kunci blokir MLflow untuk penyimpanan lokal folder
           MLFLOW_ALLOW_FILE_STORE: "true"
