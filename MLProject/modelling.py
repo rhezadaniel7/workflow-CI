@@ -11,10 +11,6 @@ from sklearn.metrics import (
 
 
 def main(n_estimators: int, max_depth: int) -> None:
-    # MLflow tracking URI — default ke local file store untuk CI
-    tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "file:./mlruns")
-    mlflow.set_tracking_uri(tracking_uri)
-    mlflow.set_experiment("telco-churn-ci")
 
     # Load preprocessed data
     train = pd.read_csv("telco_preprocessing/train_processed.csv")
